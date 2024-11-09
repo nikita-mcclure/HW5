@@ -1,0 +1,53 @@
+---
+title: "HW 5"
+author: "Nikita McClure"
+date: "11/8/2024"
+output:
+  pdf_document: default
+  html_document:
+    number_sections: true
+---
+
+This homework is meant to give you practice in creating and defending a position with both statistical and philosophical evidence.  We have now extensively talked about the COMPAS ^[https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis] data set, the flaws in applying it but also its potential upside if its shortcomings can be overlooked.  We have also spent time in class verbally assessing positions both for an against applying this data set in real life.  In no more than two pages ^[knit to a pdf to ensure page count] take the persona of a statistical consultant advising a judge as to whether they should include the results of the COMPAS algorithm in their decision making process for granting parole.  First clearly articulate your position (whether the algorithm should be used or not) and then defend said position using both statistical and philosophical evidence.  Your paper will be grade both on the merits of its persuasive appeal but also the applicability of the statistical and philosophical evidence cited.  
+
+\newpage
+
+*STUDENT RESPONSE*
+
+
+I recommend that you use the COMPAS algorithm as an aid in making sentencing and parole decisions for individuals convicted of felony crimes. The algorithm can be helpful in predicting the likelihood that the person will commit another felony, which can be valuable in deciding the most applicable course of action. The use of COMPAS can lead to better results and more equitable decisions, maximizing overall societal good. 
+
+Arguments against the use of COMPAS may be made due to shortcomings of the system, such as inaccuracy, bias, and lack of transparency. However, none of these factors are compelling enough to exclude the use of COMPAS in your decision-making process. 
+
+One primary argument is the inaccuracies of COMPAS. While the algorithm is not perfect at predicting if a felon will re-offend, it is approximately 68% accurate$^{1}$. This is well above 50%, meeting some standards of accuracy for binomial prediction and therefore can be treated as sufficiently accurate. Because it uses extensive data from thousands of cases, it may be able to detect patterns that a person could not, potentially making it more accurate than any one individual. COMPAS utilizes standardized assessment, meaning it has less variability and may help reduce disparities that may result from a judge’s bias or discrepancies between judges. 
+
+The inaccuracies within the algorithm are also found to be biased, especially against black offenders, despite not directly using race as a factor. While the algorithm is 69% accurate for white offenders, it is only 67% accurate for black offenders. While this difference may not seem significant,  an important aspect of this is that the inaccuracies tend to predict white offenders towards not reoffending, the opposite is done for black offenders$^{1}$. If you were to use only the COMPAS recidivism analysis to sentence felons, the sentencing would very likely negatively impact black offenders disproportionately more than white. I am informing you of these inaccuracies and biases so as to ensure that you scrutinize the output more, especially with black offenders who are more likely to be negatively impacted. If you utilize COMPAS properly, it can be a useful tool in the decision-making process. 
+
+It may be argued that the lack of transparency due to this being a closed source, or “black-box”, algorithm introduces more potential issues. This includes the idea that there are open-source algorithms that do similar predictions, so these must be used instead. While I understand the concern and the potential of the provided alternative. I disagree with the argument against the use of COMPAS. The protection of the people being used as training and testing data should be prioritized over an algorithm being 100% transparent. While the data is anonymized in open-source algorithms, if enough information is known about the felon, such as zip code, age, and prior acts, one may be able to find said felon in the dataset and learn more private information about them. While this may seem outlandish, it happened in another case with a similar open-source algorithm. (Now Dr.) Latanya Sweeny was able to match the then governor William Weld to his anonymous medical patient records using public voter information. Similar scenarios have happened since, proving that reidentification with anonymized data is a risk$^{3}$. COMPAS is closed-source, so the data is better protected and those in the system need not fear a similar event occurring. The justice system seeks to protect those within it, and the design of this algorithm ensures that people’s trust and privacy will not be violated. 
+
+Additionally, the transparency argument is often made that the subject cannot see the reasoning behind their judgment. However, many of the factors used in COMPAS’ assessment are known, meaning some of the reasoning is clear. Also, as this is just one factor in your decision-making process, being forthcoming about the use of the algorithm is sufficient. This is supported by the case of Loomis v. State, where Wisconsin ruled that COMPAS was permissible if its usage was made clear and if it was not the only factor in the decision$^{2}$. 
+
+Furthermore, the alternative open-source algorithms previously mentioned refer to those such as LSI-R (Level of Service Inventory-Revised) and PSA (Public Safety Assessment). These do not truly provide the same predictions as COMPAS. LSI-R focuses on general assessment of criminogenic needs related to recidivism more so than just their risk of reoffending$^{5}$. Comparatively, PSA only provides risk of failure to appear in court or commit new criminal activity pretrial, not felony recidivism $^{4}$.
+
+As the need for transparency does not outweigh the need to protect individuals, and the alternatives are not sufficient anyway, this argument is not sufficient for you to not use COMPAS to aid you in making the necessary decisions. 
+
+Some argue that the use of COMPAS is unethical or morally questionable. People argue that it may negate the human aspect of sentencing too much by allowing an algorithm to make the decision. Additionally, some believe that it may reduce the humanity of a felon by seeing them only as a risk score in an algorithm. However, as long as the COMPAS output is only supplementing the decision and not replacing it and the judge is effectively considering all aspects of the case, the defendant, and the potential biases of COMPAS, it can be used ethically. 
+ 	COMPAS analyzes more information than you have available or are capable of addressing. Despite its biases, it is likely more objective than yourself as it has not seen the trial and the personality of the defendant. COMPAS provides valuable information that can be utilized to aid you and allow you to be more confident that you have made a fair decision. However, no algorithm can replace your knowledge and experience, thus it should only be used to aid you and not make the decision for you. 
+
+\newpage
+
+References
+
+1. Angwin, J., Larson, J., Kirchner, L., & Mattu, S. (2016, May 23). Machine bias. ProPublica. https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing 
+
+
+2. Hlr. (2023, March 24). State v. Loomis. Harvard Law Review. https://harvardlawreview.org/print/vol-130/state-v-loomis/ 
+
+
+3. Patel, S. (2021, February 18). Keeping secrets: Anonymous data isn’t always anonymous. UCB-UMT. https://ischoolonline.berkeley.edu/blog/anonymous-data/ 
+
+
+4. The Public Safety Assessment. (n.d.-a). https://cepp.com/wp-content/uploads/2021/04/The-Public-Safety-Assessment-2021.pdf
+
+
+5. The Utility of Level of Service Inventory – revised (LSI-R) ... (n.d.-a). https://correctiveservices.dcj.nsw.gov.au/documents/research-and-statistics/rb29-utility-of-level-of-service-inventory-.pdf 
